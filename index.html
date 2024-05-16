@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mystic Treasure</title>
+<link rel="stylesheet" href="index.css"> <!-- Link your external CSS file -->
+</head>
+<body>
+  <header class="sticky-header">
+    <div class="logo-container">
+      <img src="logo.png" alt="Logo" width="40" height="40">
+    </div>
+    <h1 class="welcome-text">Mystic Treasure</h1>
+    <div class="nav-container">
+      <nav class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="Products.html">Product</a>
+        <a href="AboutUs.html">About us</a>
+        <a href="ContactUs.html">Contact us</a>
+      </nav>
+    </div>
+    <a href="cart.html">
+      <img src="cart.png" alt="Cart" width="45" height="45" class="cart-icon">
+    </a>
+  </header>
+  <center>
+   <p class="quote-text"><font face="monospace" size="5">"Dive into a World of Glamour and Intrigue, Uncover Your Signature Style"</font></p>
+  </center>
+
+  <p class="featured-products-heading"><font face="monospace" size="12"> Featured Products </font></p>
+  <div class="featured-products">
+    <div class="product-carousel">
+      <div class="product-container">
+        <img src="earrings1.jpg" alt="Earrings">
+        <div class="product-description">
+          <p>Presenting our magnificent gold earrings, which are made from the best materials, carry enhancement and luxury. Every pair has eye-catching, simple designs but can elevate any look casually. Put on the purest gold on your ears with Mystic Treasure to step into ever-present beauty.</p>
+          <p>Php 1,500</p>
+          <button class="add-to-cart-button" onclick="addToCart()">Add to Cart</button>
+        </div>
+      </div>
+      <!-- Add more product containers as needed -->
+    </div>
+    <button class="prev-button">&#10094;</button>
+    <button class="next-button">&#10095;</button>
+  </div>
+
+  <p><font face="monospace" size="12"> Product Video </font></p>
+  <video width="500" height="400" controls>
+    <source src="productvideo.mp4" type="video/mp4">
+  </video>
+
+  <p><font face="monospace" size="12"> Product Audio </font></p>
+  <audio controls>
+    <source src="audio1.mp3" type="audio/mp3">
+  </audio>
+
+  <p><font face="monospace" size="12"> Contact Forms </font></p>
+  <form>
+    <label for="name"><font face="monospace" size="6">Name:</font></label>
+    <br>
+    <input type="text" id="name" name="name">
+    <br>
+    <label for="email"><font face="monospace" size="6">Email:</font></label>
+    <br>
+    <input type="email" id="email" name="email">
+    <br>
+    <label for="message"><font face="monospace" size="6">Message:</font></label>
+    <br>
+    <textarea id="message" name="message" rows="10" cols="50"></textarea>
+  </form>
+
+  <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+.sticky-header {
+  position: fixed;
+  top: 0; /* Adjust the value as needed */
+  width: 100%;
+  z-index: 900; /* Reduce the z-index to ensure the text is visible */
+  background-color: #EEEEEE;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.welcome-text {
+  font-size: 1.5rem; /* Adjust font size as needed */
+  font-weight: bold;
+  font-family: Work Sans, sans-serif; /* Add Montserrat font */
+}
+
+.nav-container {
+  display: flex; /* Make the container a flexbox */
+  justify-content: center; /* Center align the content horizontally */
+  align-items: center; /* Center align the content vertically */
+  flex-grow: 1; /* Allow the navigation container to grow and take available space */
+}
+.nav-container {
+  margin-left: auto; /* Push the navigation links to the left */
+}
+.nav-links {
+  margin-left: -270px; /* Adjust the value as needed */
+}
+
+.nav-links a {
+  padding: 10px 15px; /* Adjust padding as needed */
+}
+
+.nav-links a:hover {
+  color: red;
+}
+
+.cart-icon {
+  width: 35px; /* Adjust width as needed */
+  height: 35px; /* Adjust height as needed */
+  position: absolute;
+  top: 50%;
+  right: 300px; /* Adjust the value as needed */
+  transform: translateY(-50%);
+  transition: transform 0.1s ease-in-out; /* Add transition for transform */
+}
+
+.cart-icon:hover {
+  transform: scale(1.5); /* Scale the cart icon on hover */
+}
+
+/* Links */
+a {
+  font-family: Montserrat, sans-serif; /* Add Montserrat font */
+  background-image: linear-gradient(
+    to right,
+    #FF0000,
+    #FF0000 50%,
+    #000 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.1s ease-in-out;
+}
+
+a:before {
+  content: '';
+  background: #FF0000;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.1s ease-in-out;
+}
+
+a:hover {
+  background-position: 0;
+  color: red;
+}
+
+a:hover::before {
+  width: 100%;
+}
+
+
+.featured-products {
+  position: relative;
+  background-image: url('bg1.jpg');
+  background-size: cover; /* Adjust the size to cover the container */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  background-position: center center; /* Center the background image */
+  color: white;
+  text-align: center; /* Center text horizontally */
+  padding: 100px 0; /* Adjust padding as needed */
+}
+
+
+.product-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  height: auto; /* Adjust height as needed */
+}
+
+/* Product Container */
+.product-container {
+  flex-shrink: 0;
+  width: 400px; /* Adjust width as needed */
+  margin: 0 auto; /* Center the container horizontally */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Product Description */
+.product-description {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+
+.product-container:hover .product-description {
+  opacity: 1;
+}
+
+.product-description p {
+  color: white;
+  font-family: Montserrat, sans-serif; /* Add Montserrat font */
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+/* Product Image */
+.product-container img {
+  width: 400px;
+  height: 400px;
+  margin-bottom: 20px;
+}
+
+/* Carousel Buttons */
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
+
+.featured-products-heading {
+  text-align: center; /* Center-align the text */
+  margin-top: 50px; /* Adjust the margin to move it below the header */
+}
+
+.quote-text {
+  text-align: center; /* Center-align the text */
+  margin-bottom: 20px; /* Add margin to separate it from the "Featured Products" heading */
+}
+
+body {
+  padding-top: 100px; /* Adjust the padding to move content below the header */
+}
