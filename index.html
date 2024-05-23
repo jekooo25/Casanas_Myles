@@ -1,74 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mystic Treasure</title>
-<link rel="stylesheet" href="index.css"> <!-- Link your external CSS file -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystic Treasure</title>
+    <link rel="stylesheet" href="index.css"> 
 </head>
 <body>
-  <header class="sticky-header">
-    <div class="logo-container">
-      <img src="logo.png" alt="Logo" width="40" height="40">
-    </div>
-    <h1 class="welcome-text">Mystic Treasure</h1>
-    <div class="nav-container">
-      <nav class="nav-links">
-        <a href="home.html">Home</a>
-        <a href="Products.html">Product</a>
-        <a href="AboutUs.html">About us</a>
-        <a href="ContactUs.html">Contact us</a>
-      </nav>
-    </div>
-    <a href="cart.html">
-      <img src="cart.png" alt="Cart" width="45" height="45" class="cart-icon">
-    </a>
-  </header>
-
-  <p class="quote-text">"Dive into a World of Glamour and Intrigue, Uncover Your Signature Style"</p>
-
-  <p class="featured-products-heading">Featured Products</p>
-  <div class="featured-products">
-    <div class="product-carousel">
-      <div class="product-container">
-        <img src="earrings1.jpg" alt="Earrings">
-        <div class="product-description">
-          <p>Presenting our magnificent gold earrings, which are made from the best materials, carry enhancement and luxury. Every pair has eye-catching, simple designs but can elevate any look casually. Put on the purest gold on your ears with Mystic Treasure to step into ever-present beauty.</p>
-          <p>Php 1,500</p>
-          <button class="add-to-cart-button" onclick="addToCart()">Add to Cart</button>
+  <div class="header">
+        <div class="logo-title">
+            <div class="logo">
+                <img src="logo.png" alt="Mystic Treasure Logo">
+            </div>
+            <h1 class="site-title">Mystic Treasure</h1>
         </div>
-      </div>
-      <!-- Add more product containers as needed -->
+        <div class="navigation">
+            <ul>
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="Products.html">Shop</a></li>
+                <li><a href="AboutUs.html">About</a></li>
+                <li><a href="ContactUs.html">Contact</a></li>
+            </ul>
+        </div>
     </div>
-    <button class="prev-button">&#10094;</button>
-    <button class="next-button">&#10095;</button>
-  </div>
 
-  <p class="section-title">Product Video</p>
-  <video width="500" height="400" controls>
-    <source src="productvideo.mp4" type="video/mp4">
-  </video>
+    <div class="image-container">
+        <img src="bg1.jpg" alt="Background Image" class="floating-image">
+        <img src="earrings1.jpg" alt="Earrings 1" class="product-image">
+        <div class="product-info">
+            <div class="product-description">Product description goes here.</div>
+        </div>
+        <div class="left-side-text">Featured Products</div>
+        <div class="glamour-text">
+            Dive into a World of Glamour and Intrigue,<br> Uncover Your Signature Style
+        </div>
+    </div>
+    
+    <div class="add-to-cart-container">
+        <button class="add-to-cart">Shop Now</button>
+    </div>
 
-  <p class="section-title">Product Audio</p>
-  <audio controls>
-    <source src="audio1.mp3" type="audio/mp3">
-  </audio>
+    <img src="bg2.jpg" alt="Background Image2" class="floating-image2">
+    <img src="bg4.jpg" alt="Background Image4" class="floating-image3">
+    <div class="video-container">
+        <video src="productvideo.mp4" autoplay muted loop class="product-video"></video>
+    </div>
 
-  <p class="section-title">Contact Forms</p>
-  <form>
-    <label for="name" class="form-label">Name:</label>
-    <br>
-    <input type="text" id="name" name="name">
-    <br>
-    <label for="email" class="form-label">Email:</label>
-    <br>
-    <input type="email" id="email" name="email">
-    <br>
-    <label for="message" class="form-label">Message:</label>
-    <br>
-    <textarea id="message" name="message" rows="10" cols="50"></textarea>
-  </form>
+    <audio controls class="custom-audio">
+        <source src="audio1.mp3" class="audio1">
+        Your browser does not support the audio element.
+    </audio>
 
-  <script src="index.js"></script>
+    <div class="footer">
+        <a href="#"><img src="fb.png" alt="Facebook"></a>
+        <a href="#"><img src="ig.png" alt="Instagram"></a>
+        <a href="#"><img src="pinterest.png" alt="Pinterest"></a>
+        <a href="#"><img src="yt.png" alt="Instagram"></a>
+        <div class="copyright">
+            &copy; 2024 Mystic Treasure. All rights reserved.
+        </div>
+    </div>
+
+    <img id="igpost1" class="igpost" src="igpost1.png" alt="Instagram Post">
+    <img id="igpost2" class="igpost" src="igpost2.png" alt="Instagram Post">
+    <img id="igpost3" class="igpost" src="igpost3.png" alt="Instagram Post">
+
+    <button class="nav-btn prev-btn">←</button>
+    <button class="nav-btn next-btn">→</button>
+
+    <script src="index.js"></script>
+	<script src="products.js"></script>
 </body>
 </html>

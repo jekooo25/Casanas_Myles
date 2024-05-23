@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* Reset default margin and padding */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Sticky Header */
+.header {
+  background-color: rgba(242, 239, 229, 0.9);
+  color: #000;
+  padding: 10px 20px;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  width: auto;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .logo-title {
+  display: flex;
+  align-items: center;
+}
+
+.header .logo img {
+  width: 60px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.header .site-title {
+  font-family: 'Manrope', sans-serif;
+  font-size: 24px;
+  margin: 0;
+}
+
+.header .navigation {
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.header .navigation ul li {
+  margin-left: 20px;
+}
+
+.header .navigation ul li a {
+  font-family: 'Manrope', sans-serif;
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.header .navigation ul li a:hover {
+  color: #666;
+}
+
+/* Content Area (assuming a class of 'content' for your content section) */
+.content {
+  margin-top: 150px;
+  padding: 20px;
+}
+
+/* Main Content Area */
+.main-content {
+  padding-bottom: 200px; /* Adjust this value to create space for the footer */
+}
+
+.image-container {
+	
+  width: 850px; /* Example width, adjust as needed */
+  position: relative; /* Required for absolute positioning of children */
+}
+
+.floating-image2 {
+  width: 300px;
+  height: 525px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-left: 250px; /* Add a left margin (adjust as needed) */
+   margin-top: 150px;
+}
+
+.video-container {
+  position: absolute;
+  top: 15px;   /* Adjust top position as needed */
+  left: 290px;  /* Adjust left position as needed */
+  width: 300px; /* Set the desired video width */
+  height: 600px; /* Set the desired video height */
+  margin-top: 130px;
+  z-index: 2;
+}
+
+.video-container video {
+  width: 100%; 
+  height: 100%; 
+}
+
+/* Footer */
+.footer {
+  background-color: #f5f5f5;
+  padding: 10px;
+  text-align: center;
+   margin-top: 30%; /* Push footer to bottom using flexbox */
+  
+}
+.footer img {
+  width: 30px; /* Adjust the width to your desired size */
+  height: auto;  /* Maintain aspect ratio */
+  margin: 0 10px;  /* Adjust spacing between icons as needed */
+}
+
+/* Flexbox to push footer down */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.about-us-container {
+  position: absolute;
+  top: 130px;
+  right: 300px;
+  z-index: 3; 
+}
+
+.about-us-text {
+  font-family: 'Bebas Neue', sans-serif; /* Apply the Bebas Neue font */
+  font-size: 65px; /* Increase the font size (adjust as needed) */
+  text-align: right;
+}
+
+.about-us-container2 {
+  position: absolute;
+  top: 250px; /* Adjust position as needed */
+  right: 280px; /* Adjust position as needed */
+  z-index: 3;
+}
+
+.about-us-text2 {
+  font-family: 'Monroe', sans-serif; /* Or your desired font */
+  font-size: 18px;  /* Adjust font size as needed */
+  line-height: 1.6; /* Adjust line height for readability */
+  text-align: justify; /* Optional for justified text */
+  max-width: 400px; /* Optional to limit the width of the text container */
+}
+
+
+.floating-image3 {
+  width: 300px;
+  height: 525px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-left: 950px; /* Add a left margin (adjust as needed) */
+   margin-top: 150px;
+}
+
+.mypic {
+  width: 300px;
+  height: 525px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-left: 920px; /* Add a left margin (adjust as needed) */
+   margin-top: -500px;
+}
+
+.about-me-container {
+  position: absolute;
+  bottom: -250px; /* Adjust position as needed */
+  left: 280px; /* Adjust position as needed */
+  z-index: 3;
+}
+
+.about-me-text {
+  font-family: 'Bebas Neue', sans-serif; /* Or your desired font */
+  font-size: 40px; /* Adjust font size as needed */
+  max-width: 400px; /* Optional to limit the width of the text container */
+  text-transform: uppercase;
+}
+
+.about-me-container2 {
+  position: absolute;
+  bottom: -920px; /* Adjust position as needed */
+  right: 860px; /* Adjust position as needed */
+  z-index: 3;
+}
+
+.about-me-text2 {
+  font-family: 'Monroe', sans-serif; /* Or your desired font */
+  font-size: 18px;  /* Adjust font size as needed */
+  line-height: 1.6; /* Adjust line height for readability */
+  text-align: justify; /* Optional for justified text */
+  max-width: 400px; /* Optional to limit the width of the text container */
+}

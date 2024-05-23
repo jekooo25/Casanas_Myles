@@ -1,91 +1,195 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mystic Treasure</title>
+  <title>Mystic Treasure</title>
+  <link rel="stylesheet" href="products.css">
 </head>
-<link rel="stylesheet" href="home.css">
-<body background="background1.jpg">
-<header>
-<center>
-<h1><font face="monospace" size="7">Mystic Treasure Products</font></h1>
-<hr>
-<div class="nav-container">
-  <nav class="nav-links">
-    <a href="Index.html">Index</a>
-    <a href="Products.html">Product</a>
-    <a href="AboutUs.html">About us</a>
-    <a href="ContactUs.html">Contact us</a>
-  </nav>
+<body>
+  <div class="header">
+    <div class="logo-title">
+      <div class="logo">
+        <img src="logo.png" alt="Mystic Treasure Logo">
+      </div>
+      <h1 class="site-title">Mystic Treasure</h1>
+    </div>
+
+    <div class="navigation">
+      <ul>
+          <a href="#" class="cart-link" onclick="openCart(event)">
+            <img src="cart.png" alt="Cart Icon" class="cart-img">
+          </a>
+		  <li><a href="Index.html">Home</a> 
+        </li>
+        <li><a href="Products.html">Shop</a></li>
+        <li><a href="AboutUs.html">About</a></li>
+        <li><a href="ContactUs.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="cartOverlay" class="cart-overlay">
+    <div class="cart-content">
+      <span class="close-btn" onclick="closeCart()">&times;</span>
+      <h2>Your Cart</h2>
+      <div id="cartSummary"></div>
+    </div>
+  </div>
+<div class="content">
+
+    <div class="product-container">
+        <img src="earrings1.jpg" alt="Earrings 1" class="product-image">
+        <div class="product-info">
+            <h2 class="product-title">Whisper Earrings: Fashioned from pure gold, these delicate drops softly shimmer with every movement.</h2>
+            <p class="product-price">Php 1,500</p>
+            <div class="add-to-cart-section">
+                <input type="number" class="quantity-input" value="1" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-container">
+        <img src="earrings2.jpg" alt="Earrings 2" class="product-image">
+        <div class="product-info">
+            <h2 class="product-title">Serenity Hoops: Crafted from radiant gold, these timeless circles radiate warmth and elegance with every sway.</h2>
+            <p class="product-price">Php 1,200</p>
+            <div class="add-to-cart-section">
+                <input type="number" class="quantity-input" value="1" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-container">
+        <img src="earrings3.jpg" alt="Earrings 3" class="product-image">
+        <div class="product-info">
+            <h2 class="product-title">Lumin Earrings: Handcrafted with gleaming gold, these studs capture the light effortlessly, adding a touch of luxury to any ensemble.</h2>
+            <p class="product-price">Php 3,000</p>
+            <div class="add-to-cart-section">
+                <input type="number" class="quantity-input" value="1" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-container">
+        <img src="necklace1.jpg" alt="Necklace 1" class="product-image">
+        <div class="product-info">
+            <h2 class="product-title">Golden Horizon Necklace: A stunning piece, forged from pure gold, evoking the endless beauty of the horizon at sunset.</h2>
+            <p class="product-price">Php 4,000</p>
+            <div class="add-to-cart-section">
+                <input type="number" class="quantity-input" value="1" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-container">
+        <img src="necklace2.jpg" alt="Necklace 2" class="product-image">
+        <div class="product-info">
+            <h2 class="product-title">Azure Waters Necklace: Inspired by the tranquil depths of the sea, this necklace features a shimmering aquamarine stone set in lustrous gold, invoking a sense of serenity and grace.</h2>
+            <p class="product-price">Php 5,000</p>
+            <div class="add-to-cart-section">
+                <input type="number" class="quantity-input" value="1" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-container">
+        <img src="necklace3.jpg" alt="Necklace 3" class="product-image">
+        <div class="product-info">
+            <h2 class="product-title">Moonlit Opal Pendant: Delicately crafted with opulent opal and set in gleaming gold, this pendant exudes an ethereal charm reminiscent of moonlit nights.</h2>
+            <p class="product-price">Php 4,500</p>
+            <div class="add-to-cart-section">
+                <input type="number" class="quantity-input" value="1" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-container">
+        <img src="watch1.jpg" alt="Watch 1" class="product-image">
+        <div class="product-info">
+            <h2 class="product-title">Eclipse Chronograph: A sleek timepiece featuring a minimalist design, crafted with precision and elegance to capture the essence of time itself.</h2>
+            <p class="product-price">Php 8,000</p>
+            <div class="add-to-cart-section">
+                <input type="number" class="quantity-input" value="1" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-container">
+        <img src="watch2.jpg" alt="Watch 2" class="product-image">
+        <div class="product-info">
+            <h2 class="product-title">Aurora Horizon Watch: With its radiant dial and polished gold accents, this watch reflects the beauty of the aurora borealis, bringing a touch of enchantment to every moment.</h2>
+            <p class="product-price">Php 7,000</p>
+            <div class="add-to-cart-section">
+                <input type="number" class="quantity-input" value="1" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-container">
+        <img src="watch3.jpg" alt="Watch 3" class="product-image">
+        <div class="product-info">
+            <h2 class="product-title">Midnight Skytime Navigator: Designed for adventurers, this rugged yet refined watch boasts luminous hands and markers, guiding you through the depths of night with unwavering accuracy and style.</h2>
+            <p class="product-price">Php 8,000</p>
+            <div class="add-to-cart-section">
+                <input type="number" class="quantity-input" value="1" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-container">
+        <img src="bracelet1.jpg" alt="Bracelet 1" class="product-image">
+        <div class="product-info">
+            <h2 class="product-title">Eternal Harmony Bracelet: A symbol of everlasting beauty and grace, this bracelet features interlocking links of polished gold, echoing the harmonious rhythm of life itself.</h2>
+            <p class="product-price">Php 2,500</p>
+            <div class="add-to-cart-section">
+                <input type="number" class="quantity-input" value="1" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-container">
+        <img src="bracelet2.jpg" alt="Bracelet 2" class="product-image">
+        <div class="product-info">
+            <h2 class="product-title">Stardust Bangle: Adorn your wrist with celestial elegance. This shimmering bangle, crafted from fine gold, twinkles like the stars against the night sky.</h2>
+            <p class="product-price">Php 2,000</p>
+            <div class="add-to-cart-section">
+                <input type="number" class="quantity-input" value="1" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-container">
+        <img src="bracelet3.jpg" alt="Bracelet 3" class="product-image">
+        <div class="product-info">
+            <h2 class="product-title">Whispering Willow Cuff: Inspired by the gentle sway of willow branches, this delicate cuff, crafted from intricately woven gold, whispers of timeless elegance and natural beauty.</h2>
+            <p class="product-price">Php 2,000</p>
+            <div class="add-to-cart-section">
+                <input type="number" class="quantity-input" value="1" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
 </div>
-<hr>
-<table border="1" cellspacing="0" cellpadding="10">
-  <tr>
-  <center>
-    <td><font face="monospace" size="6">Product</td>
-    <td><font face="monospace" size="6">Description</td>
-    <td><font face="monospace" size="6">Price</td>
-    <td><font face="monospace" size="6">Quantity</td>
-    <td><font face="monospace" size="6">Add to cart</td>
-	</center>
-  </tr>
-  <tr>
-    <td><img src="necklace1.jpg" alt="Necklace" width="400" height="400"></td>
-    <td> <font face="monospace" size="6"> Elevate your style with our exquisite pendant necklace, a timeless piece crafted to add a touch of elegance to any ensemble.
-    The delicate chain holds a stunning pendant, meticulously designed to capture attention with its graceful curves and intricate detailing.
-    Whether worn solo for understated sophistication or layered for a fashion-forward look, this necklace effortlessly complements any outfit, making it a must-have addition to your jewelry collection.
-    Embrace effortless glamour with our versatile pendant necklace.</td>
-    <td><font face="monospace" size="7">PHP 4,000 </td>
-    <td><input type="number" min="1" value="1"></td>
-    <td><button><font face="monospace" size="5">Add to cart</button></a></td>
-  </tr>
-   <tr>
-    <td><img src="bracelet1.jpg" alt="Bracelet" width="400" height="400"></td>
-    <td> <font face="monospace" size="6">Presenting our outstanding gold bracelet, lovingly made from the best materials to add an extra touch of class and elegance.
-    Its shiny quality gently improves your style whether it's worn alone or stacked with other bracelets.
-    Experience the charm of our superior gold bracelet right now. </td>
-    <td><font face="monospace" size="7">PHP 2,500 </td>
-    <td><input type="number" min="1" value="1"></td>
-    <td><button><font face="monospace" size="5">Add to cart</button></a></td>
-  </tr>
-   <tr>
-    <td><img src="earrings1.jpg" alt="Earings" width="400" height="400"></td>
-    <td> <font face="monospace" size="6"> Presenting our magnificent gold earrings, which are made from the best materials, carry enhancement and luxury.
-	Every pair has eye-catching, simple designs but can elevate any look casually.
-	Put on the purest gold on your ears with Mystic Treasure to step into ever-present beauty.</td>
-    <td><font face="monospace" size="7">PHP 1,500 </td>
-    <td><input type="number" min="1" value="1"></td>
-    <td><button><font face="monospace" size="5">Add to cart</button></a></td>
-  </tr>
-   <tr>
-    <td><img src="watch1.jpg" alt="Watch" width="400" height="400"></td>
-    <td> <font face="monospace" size="6"> Presenting our stunning gold watch, which has been carefully constructed with exceptional attention to detail.
-	Its elegant design, which displays quality and sophistication, unquestionably gives a touch of luxuriousness to any attire.
-	Mystic Treasure's classic elegance will instantly elevate your look.</td>
-    <td><font face="monospace" size="7">PHP 8,000 </td>
-    <td><input type="number" min="1" value="1"></td>
-    <td><button><font face="monospace" size="5">Add to cart</button></a></td>
-  </tr>
-</table>
-<hr>
-<nav>
-<hr>
-<p>Follow us on: </p>
-<a href="#"><img src="x.png" alt="Social Media Icon" width="50" height="50"></a>
-<a href="#"><img src="fb.png" alt="Social Media Icon" width="50" height="50"></a>
-<a href="#"><img src="ig.png" alt="Social Media Icon" width="50" height="50"></a>
-<hr>
- <button type="button"><font face="monospace" size="4">Receive exclusive email by clicking this button</button>
-<hr>
-<div align="center">
-<a href="index.html"><font size="5">Index</font></a> |
-<a href="Home.html"><font size="5">Home</font></a> |
-<a href="AboutUs.html"><font size="5">About us</font></a> |
-<a href="ContactUs.html"><font size="5">Contact Us</font></a>
-</div>
-</nav>
-</center>
-</header>
+    <div class="footer">
+        <a href="#"><img src="fb.png" alt="Facebook"></a>
+        <a href="#"><img src="ig.png" alt="Instagram"></a>
+        <a href="#"><img src="pinterest.png" alt="Pinterest"></a>
+        <a href="#"><img src="yt.png" alt="Instagram"></a>
+        <div class="copyright">
+            &copy; 2024 Mystic Treasure. All rights reserved.
+        </div>
+    </div>
+<script src="products.js"></script>
 </body>
 </html>

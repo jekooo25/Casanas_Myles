@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Semantic Layout Example</title>
+<style>
+  nav {
+    background-color: lightblue; /* Adjust as needed */
+    padding: 10px; 
+  }
+
+  section {
+    width: 60%; /* Takes most of the width */
+    float: left;
+    padding: 10px;
+    box-sizing: border-box; /* Includes padding in width calculation */
+  }
+
+  aside {
+    width: 35%; /* Remaining width */
+    float: right;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  article {
+    background-color: #eee;
+    padding: 15px;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <h1>My Website</h1>
+  </nav>
+
+<section>
+  <h2>Main Content</h2>
+  <p>This is where the main content of your page would go.</p>
+</section>
+
+<aside>
+  <h3>Related Information</h3>
+  <article>
+    <h4>Article Title</h4>
+    <p>Some relevant information or a news article.</p>
+  </article>
+</aside>
+
+</body>
+</html>

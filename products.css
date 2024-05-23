@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+/* CSS for the sticky header */
+.header {
+    background-color: rgba(242, 239, 229, 0.9);
+    color: #000;
+    padding: 10px 20px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    width: auto;
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo img {
+    width: 60px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.header .site-title {
+    font-family: 'Manrope', sans-serif;
+    font-size: 24px;
+    margin: 0;
+}
+
+.header .navigation {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.header .navigation ul li {
+    margin-left: 20px;
+}
+
+.header .navigation ul li a {
+    font-family: 'Manrope', sans-serif;
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.header .navigation ul li a:hover {
+    color: #666;
+}
+
+.cart-icon {
+    margin-right: 13px; /* Adjust margin as needed */
+	margin-bottom: -5px;
+margin-left: auto; /* Push the cart to the right */
+}
+
+.cart-link {
+    display: inline-block; /* Ensures the link takes up space */
+}
+
+.cart-img {
+    width: 30px; /* Adjust width as needed */
+    height: 30px; /* Adjust height as needed */
+}
+
+.floating-image {
+    width: 100%;
+    max-width: 1495px;
+    height: 525px;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure content starts below the header */
+.content {
+    margin-top: 150px;
+    padding: 20px;
+}
+
+.product-container {
+    background-color: #fff;
+    padding: 20px; /* Reduced padding */
+    border-radius: 5px; /* Smaller border radius */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    position: relative;
+    max-width: 350px; /* Limit the width */
+    margin: 0 auto; /* Center the container */
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+}
+
+.product-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-bottom-left-radius: 5px; /* Rounded bottom-left corner */
+    border-bottom-right-radius: 5px; /* Rounded bottom-right corner */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-title {
+    margin: 0;
+    font-size: 16px; /* Reduced font size */
+}
+
+.product-price {
+    margin: 5px 0;
+    font-size: 14px; /* Reduced font size */
+}
+
+.add-to-cart {
+    background-color: #fff; /* White background */
+    color: #d4af37; /* Gold text */
+    border: 2px solid #d4af37; /* Gold border for minimalist look */
+    padding: 10px 20px; /* Adjust padding for the button */
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px; /* Adjust font size for readability */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, border-color 0.3s ease; /* Smooth transition effects */
+   border-radius: 5px; /* Border radius for rounded corners */
+}
+
+.add-to-cart:hover {
+    background-color: #d4af37; /* Gold background on hover */
+    color: #fff; /* White text on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+.add-to-cart:active {
+    transform: scale(0.95); /* Slightly scale down when clicked */
+    border-color: #d4af37; /* Ensure border color remains the same */
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Align items to the left */
+}
+
+.product-container {
+    width: calc(33.33% - 20px);
+    margin-right: 45px;
+    margin-bottom: 20px;
+}
+
+.Shop-text {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px; /* Adjust font size as needed */
+    text-align: center;
+    margin-bottm: 20px; /* Adjust margin-top to lower the text */
+}
+
+
+/* styles.css */
+.footer {
+    background-color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.footer a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+
+.footer img {
+    width: 30px; /* Set the width of the icons */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 10px;
+}
+
+.footer-bottom {
+    margin-top: 15px; /* Adjust the margin as needed */
+}
+
+/* ... (Your existing styles) */
+
+.cart-overlay {
+    height: 100%;
+    width: 0; /* Initially closed */
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+     background-color: rgba(242, 239, 229, 0.9); /* Dim the background */
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+    transition: 0.5s; /* Add a smooth transition */
+	
+	
+}
+
+.cart-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: none;
+	 border-radius: 15px;
+	 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Adjust as needed */
+}
+
+.close-btn {
+    color: #00;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cart-item-image {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.cart-item-info {
+  flex-grow: 1; /* Allow the info to take up remaining space */
+}
+
+.cart-item-title {
+  font-weight: bold;
+}
+
+.cart-item-quantity {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-input {
+  width: 40px;
+  margin: 0 5px;
+}
+
+.cart-total {
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.checkout-button {
+  background-color: #d4af37;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Manrope', sans-serif;
+  margin-top: 10px;
+}
+.quantity-btn {
+  /* Apply the same styles as your checkout button */
+  background-color: #d4af37; /* Example color */
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  font-family: 'Manrope', sans-serif;
+  cursor: pointer;
+  /* Add any other styles from your checkout button */
+}
+

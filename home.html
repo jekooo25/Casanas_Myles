@@ -1,51 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mystic Treasure</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystic Treasure</title>
+    <link rel="stylesheet" href="index.css"> 
 </head>
-<body background="background1.jpg">
-<header>
-<center>
-<img src="logo.png" alt="Logo" width="120" height="140"> 
-<h1><font face="monospace" size="7">Mystic Treasure</font></h1>
-<p><font face="monospace" size="5">"Dive into a World of Glamour and Intrigue, Uncover Your Signature Style"</font></p>
-<hr>
-<nav>
-<div align="center">
-<input type="search" placeholder="Search">
-</div>
-<div align="center">
-<a href="index.html"><font size="5">Index</font></a> |
-<a href="Products.html"><font size="5">Products</font></a> |
-<a href="AboutUs.html"><font size="5">About Us</font></a> |
-<a href="ContactUs.html"><font size="5">Contact Us</font></a>
-</div>
-</nav>
-<hr>
-<p><font face="monospace" size="6">Welcome to Mystic Treasure, the place where enchanting items are found.
- Discover our carefully chosen selection of watches, necklaces, bracelets, and earrings, where classic elegance and modern craftsmanship meet.
- Use Mystic Treasure to find your own style. Come experience the world of Mystic Treasure,
- A group of passionate artists came together with the common goal of creating something truly special in the basic limits of a small workshop to embark on our journey.
- They set out on a mission to create accessories that would capture people's attention, 
- driven by their passion for fine craftsmanship and desire to add a little enchantment to the world.</font></p> 
- <hr>
-<p>Follow us on: </p>
-<a href="#"><img src="x.png" alt="Social Media Icon" width="50" height="50"></a>
-<a href="#"><img src="fb.png" alt="Social Media Icon" width="50" height="50"></a>
-<a href="#"><img src="ig.png" alt="Social Media Icon" width="50" height="50"></a>
-<hr>
- <button type="button"><font face="monospace" size="4">Receive exclusive email by clicking this button</button>
-<hr>
-<div align="center">
-<a href="index.html"><font size="5">Index</font></a> |
-<a href="Products.html"><font size="5">Products</font></a> |
-<a href="AboutUs.html"><font size="5">About Us</font></a> |
-<a href="ContactUs.html"><font size="5">Contact Us</font></a>
-</div>
-</nav>
-</center>
-</header>
+<body>
+  <div class="header">
+        <div class="logo-title">
+            <div class="logo">
+                <img src="logo.png" alt="Mystic Treasure Logo">
+            </div>
+            <h1 class="site-title">Mystic Treasure</h1>
+        </div>
+        <div class="navigation">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search products...">
+            </div>
+
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="Products.html">Shop</a></li>
+                <li><a href="AboutUs.html">About</a></li>
+                <li><a href="ContactUs.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="image-container">
+        <img src="bg1.jpg" alt="Background Image" class="floating-image">
+        <img src="earrings1.jpg" alt="Earrings 1" class="product-image">
+        <div class="product-info">
+            <div class="product-description">Product description goes here.</div>
+        </div>
+        <div class="left-side-text">Featured Products</div>
+        <div class="glamour-text">
+            Dive into a World of Glamour and Intrigue,<br> Uncover Your Signature Style
+        </div>
+    </div>
+    
+    <!-- Add the Add to Cart button here -->
+    <div class="add-to-cart-container">
+        <button class="add-to-cart">Shop Now</button>
+    </div>
+
+    <img src="bg2.jpg" alt="Background Image2" class="floating-image2">
+    <img src="bg4.jpg" alt="Background Image4" class="floating-image3">
+    <div class="video-container">
+        <video src="productvideo.mp4" autoplay muted loop class="product-video"></video>
+    </div>
+
+    <audio controls class="custom-audio">
+        <source src="audio1.mp3" class="audio1">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="footer">
+        <a href="#"><img src="fb.png" alt="Facebook"></a>
+        <a href="#"><img src="ig.png" alt="Instagram"></a>
+        <a href="#"><img src="pinterest.png" alt="Pinterest"></a>
+        <a href="#"><img src="yt.png" alt="Instagram"></a>
+        <div class="copyright">
+            &copy; 2024 Mystic Treasure. All rights reserved.
+        </div>
+    </div>
+
+    <img id="igpost1" class="igpost" src="igpost1.png" alt="Instagram Post">
+    <img id="igpost2" class="igpost" src="igpost2.png" alt="Instagram Post">
+    <img id="igpost3" class="igpost" src="igpost3.png" alt="Instagram Post">
+
+    <button class="nav-btn prev-btn">←</button>
+    <button class="nav-btn next-btn">→</button>
+
+    <script src="index.js"></script>
+	<script src="products.js"></script>
 </body>
 </html>

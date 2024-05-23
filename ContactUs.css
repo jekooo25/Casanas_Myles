@@ -1,0 +1,253 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');/* Reset default margin and padding */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Sticky Header */
+.header {
+  background-color: rgba(242, 239, 229, 0.9);
+  color: #000;
+  padding: 10px 20px;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  width: auto;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .logo-title {
+  display: flex;
+  align-items: center;
+}
+
+.header .logo img {
+  width: 60px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.header .site-title {
+  font-family: 'Manrope', sans-serif;
+  font-size: 24px;
+  margin: 0;
+}
+
+.header .navigation {
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.header .navigation ul li {
+  margin-left: 20px;
+}
+
+.header .navigation ul li a {
+  font-family: 'Manrope', sans-serif;
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.header .navigation ul li a:hover {
+  color: #666;
+}
+
+/* Content Area (assuming a class of 'content' for your content section) */
+.content {
+  margin-top: 150px;
+  padding: 20px;
+}
+
+/* Main Content Area */
+.main-content {
+  padding-bottom: 200px; /* Adjust this value to create space for the footer */
+}
+
+.image-container {
+	
+  width: 850px; /* Example width, adjust as needed */
+  position: relative; /* Required for absolute positioning of children */
+}
+
+.floating-image4 {
+  width: 725px;   /* Now the width is larger */
+  height: 500px;  /* Now the height is smaller */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-left: 50px;
+  margin-top: 150px;
+}
+
+.map-container {
+  position: absolute;
+  top: 15px;      /* Adjust top position as needed */
+  left: 100px;    /* Adjust left position as needed */
+  margin-top: 190px; 
+  z-index: 2;
+}
+.map-container img { /* Target the image inside the container */
+    width: 70%;  /* Adjust the percentage as needed */
+    height: auto; /* Let the height adjust automatically */
+}
+
+
+
+/* Footer */
+.footer {
+  background-color: #f5f5f5;
+  padding: 10px;
+  text-align: center;
+   margin-top: 50%; /* Push footer to bottom using flexbox */
+  
+}
+.footer img {
+  width: 30px; /* Adjust the width to your desired size */
+  height: auto;  /* Maintain aspect ratio */
+  margin: 0 10px;  /* Adjust spacing between icons as needed */
+}
+
+/* Flexbox to push footer down */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the body takes up the full viewport height */
+}
+
+.about-us-text {
+  font-family: 'Bebas Neue', sans-serif; /* Apply the Bebas Neue font */
+  font-size: 65px; /* Increase the font size (adjust as needed) */
+  text-align: right;
+}
+.about-us-container {
+  position: absolute;
+  top: 100px;
+  right: 220px;
+  z-index: 3; 
+}
+.about-us-container2 {
+  position: absolute;
+  top: 220px;
+  right: 210px;
+  z-index: 3; 
+}
+
+.about-us-text2 {
+  font-family: 'Manrope', sans-serif; /* Apply the Bebas Neue font */
+  font-size: 18px; /* Increase the font size (adjust as needed) */
+  text-align: right;
+}
+
+.about-shop-container {
+  position: absolute;
+  top: 700px;
+  right: 950px;
+  z-index: 3; 
+}
+
+.about-shop-text {
+  font-family: 'Bebas Neue', sans-serif; /* Apply the Bebas Neue font */
+  font-size: 65px; /* Increase the font size (adjust as needed) */
+  text-align: right;
+}
+.about-shop-container2 {
+  position: absolute;
+  top: 820px;
+  right: 1000px;
+  z-index: 3; 
+  width: 300px; /* Or adjust to your desired width */
+}
+
+.about-shop-text2 {
+  font-family: 'Manrope', sans-serif; /* Apply the Bebas Neue font */
+  font-size: 18px; /* Increase the font size (adjust as needed) */
+  text-align: left;
+   max-width: 400px; 
+}
+
+
+.Shop-container {
+  position: absolute;
+  top: 600px;      /* Adjust top position as needed */
+  right: 120px;    /* Adjust left position as needed */
+  margin-top: 190px; 
+  z-index: 5;
+}
+.shopcontainer img { /* Target the image inside the container */
+    width: 50%;  /* Adjust the percentage as needed */
+    height: auto; /* Let the height adjust automatically */
+}
+
+.main-content {
+  flex: 1; /* Allow main content to grow and take up available space */
+}
+
+.contact-us-container {
+  background-color: #fff;   /* White background */
+  color: #ffd700;         /* Gold text */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;    
+  top: 600px;            
+  left: 200px;          
+  width: 350px;          /* Adjust width as needed */
+}
+
+.contact-us-container h2 {
+  text-align: center;
+  margin-bottom: 20px;    
+  font-family: 'Bebas Neue', sans-serif;
+  color: #ffd700;        /* Gold text for h2 */
+}
+
+.form-group input,
+.form-group textarea {
+  width: 80%;           
+  padding: 5px;        
+  border: 1px solid #ffd700; /* Gold border */
+  border-radius: 5px;   
+  background-color: #fff;
+  color: #ffd700;       /* Gold text for input/textarea */
+  margin: 10px auto;   
+}
+
+.form-group textarea {
+  margin-top: 15px;      
+}
+
+.form-group button {
+  background-color: #ffd700; 
+  color: #fff;             
+  padding: 10px 20px;     
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 16px;        
+  width: auto;            
+  margin: 20px auto;       
+}
+
+.form-group button:hover {
+  background-color: #b38f00;
+  color: #fff;             
+}

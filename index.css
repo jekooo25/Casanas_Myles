@@ -1,219 +1,372 @@
-.sticky-header {
-  position: fixed;
-  top: 0; /* Adjust the value as needed */
-  width: 100%;
-  z-index: 900; /* Reduce the z-index to ensure the text is visible */
-  background-color: #EEEEEE;
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* Import Manrope font */
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* Reset default margin and padding */
+body {
+    margin: 0;
+    padding: 0;
 }
 
-.welcome-text {
-  font-size: 1.5rem; /* Adjust font size as needed */
-  font-weight: bold;
-  font-family: Work Sans, sans-serif; /* Add Montserrat font */
+/* CSS for the sticky header */
+.header {
+    background-color: rgba(242, 239, 229, 0.9);
+    color: #000;
+    padding: 10px 20px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    width: auto;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.nav-container {
-  display: flex; /* Make the container a flexbox */
-  justify-content: center; /* Center align the content horizontally */
-  align-items: center; /* Center align the content vertically */
-  flex-grow: 1; /* Allow the navigation container to grow and take available space */
-}
-.nav-container {
-  margin-left: auto; /* Push the navigation links to the left */
-}
-.nav-links {
-  margin-left: -270px; /* Adjust the value as needed */
+.logo-title {
+    display: flex;
+    align-items: center;
 }
 
-.nav-links a {
-  padding: 10px 15px; /* Adjust padding as needed */
+.header .logo img {
+    width: 60px;
+    height: auto;
+    margin-right: 10px;
 }
 
-.nav-links a:hover {
-  color: red;
+.header .site-title {
+    font-family: 'Manrope', sans-serif;
+    font-size: 24px;
+    margin: 0;
+}
+
+.header .navigation {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.header .navigation ul li {
+    margin-left: 20px;
+}
+
+.header .navigation ul li a {
+    font-family: 'Manrope', sans-serif;
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.header .navigation ul li a:hover {
+    color: #666;
+}
+
+/* CSS for the floating image */
+.image-container {
+    margin-top: 110px;
+    margin-bottom: 20px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.floating-image {
+    width: 100%;
+    max-width: 1500px;
+    height: 525px;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure content starts below the header */
+.content {
+    margin-top: 150px;
+    padding: 20px;
+}
+
+.product-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 350px;
+    height: 350px;
+    transition: left 0.5s ease;
+    cursor: pointer;
+}
+
+.product-image.expand {
+    left: 350px;
+}
+
+.product-info {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    font-family: 'Manrope', sans-serif;
+    color: #fff;
+    font-size: 20px;
+    visibility: hidden; /* Ensure it is hidden initially */
+	pointer-events: auto;
+}
+
+.product-info.visible {
+    opacity: 1;
+    visibility: visible; /* Ensure it becomes visible when the class is added */
+	 pointer-events: none;
+}
+
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
+}
+
+.left-side-text {
+    position: absolute;
+    top: 20%;
+    left: 18%; /* Adjust based on your layout */
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #fff;
+    font-size: 40px; /* Adjust the font size */
+    opacity: 1; /* Initially show the text */
+    transition: opacity 0.1s ease; /* Add transition effect */
+	pointer-events: auto; /* Enable pointer events by default */
+}
+
+.left-side-text.hidden {
+    opacity: 0; /* Hide the text when the 'hidden' class is applied */
+	 pointer-events: none; /* Disable pointer events when hidden */
+}
+.glamour-text {
+    position: absolute;
+    top: 45%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #fff;
+    font-size: 30px;
+    opacity: 1; /* Change opacity to 1 to ensure the text is initially visible */
+    transition: opacity 0.1s ease;
+    pointer-events: auto;
+}
+
+
+
+.glamour-text {
+    opacity: 0; /* Hide the text when the 'hidden' class is applied */
+	 pointer-events: none; /* Disable pointer events when hidden */
+}
+video {
+    width: 100%; /* Set width to 100% of its container */
+    max-width: 100px; /* Optionally, set a maximum width */
+    height: auto; /* Maintain aspect ratio */
+	
+}
+
+
+.social-links {
+    margin-bottom: 10px; /* Add space between social links and copyright text */
+}
+
+.social-links a {
+    display: inline-block; /* Ensure social links are displayed horizontally */
+    margin: 0 10px; /* Add space between social links */
+}
+
+.social-links img {
+    width: 30px; /* Adjust the size of social media icons */
+    height: auto;
 }
 
 .cart-icon {
-  width: 35px; /* Adjust width as needed */
-  height: 35px; /* Adjust height as needed */
-  position: absolute;
-  top: 50%;
-  right: 300px; /* Adjust the value as needed */
-  transform: translateY(-50%);
-  transition: transform 0.1s ease-in-out; /* Add transition for transform */
+    margin-right: 13px; /* Adjust margin as needed */
+	margin-bottom: -5px;
 }
 
-.cart-icon:hover {
-  transform: scale(1.5); /* Scale the cart icon on hover */
+.cart-link {
+    display: inline-block; /* Ensures the link takes up space */
 }
 
-/* Links */
-a {
-  font-family: Montserrat, sans-serif; /* Add Montserrat font */
-  background-image: linear-gradient(
-    to right,
-    #FF0000,
-    #FF0000 50%,
-    #000 50%
-  );
-  background-size: 200% 100%;
-  background-position: -100%;
-  display: inline-block;
-  padding: 5px 0;
-  position: relative;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: all 0.1s ease-in-out;
+.cart-img {
+    width: 30px; /* Adjust width as needed */
+    height: 30px; /* Adjust height as needed */
 }
 
-a:before {
-  content: '';
-  background: #FF0000;
-  display: block;
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 0;
-  height: 3px;
-  transition: all 0.1s ease-in-out;
+/* Container for the Add to Cart button */
+.add-to-cart-container {
+    position: absolute; /* Absolute positioning */
+    top: 570px; /* Adjust top position as needed */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center the button exactly */
+    z-index: 20;
 }
 
-a:hover {
-  background-position: 0;
-  color: red;
+/* CSS for the Add to Cart button */
+.add-to-cart {
+    background-color: #fff; /* White background */
+    color: #d4af37; /* Gold text */
+    border: 2px solid #d4af37; /* Gold border for minimalist look */
+    padding: 10px 20px; /* Adjust padding for the button */
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px; /* Adjust font size for readability */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, border-color 0.3s ease; /* Smooth transition effects */
+    border-radius: 5px; /* Border radius for rounded corners */
 }
 
-a:hover::before {
-  width: 100%;
+.add-to-cart:hover {
+    background-color: #d4af37; /* Gold background on hover */
+    color: #fff; /* White text on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+.add-to-cart:active {
+    transform: scale(0.95); /* Slightly scale down when clicked */
+    border-color: #d4af37; /* Ensure border color remains the same */
 }
 
 
-.featured-products {
-  position: relative;
-  background-image: url('bg1.jpg');
-  background-size: cover; /* Adjust the size to cover the container */
-  background-repeat: no-repeat; /* Prevent the background image from repeating */
-  background-position: center center; /* Center the background image */
-  color: white;
-  text-align: center; /* Center text horizontally */
-  padding: 100px 0; /* Adjust padding as needed */
+
+
+.container {
+    position: relative;
+    /* Other styles for the container */
+}
+
+.floating-image3 {
+    position: absolute;
+    top: 135%; /* Adjust as needed */
+    left: 70%; /* Adjust as needed */
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 5; /* Ensure it appears below the video */
+}
+
+.floating-image2 {
+    position: absolute;
+    top: 130%; /* Adjust as needed */
+    left: 20%; /* Adjust as needed */
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 5; /* Ensure it appears below the video */
+}
+
+.video-container {
+    position: relative;
+    width: 45%;
+    height: 530px; /* Set your desired height */
+    z-index: 15;
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.product-video {
+    max-width: 40%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* This will horizontally center the video */
+}
+
+ .custom-audio {
+        width: 300px; /* Set the width */
+        height: 740px; /* Set the height */
+        position: absolute; /* Position the audio element */
+        top: 20px; /* Adjust top position */
+        left: 920px; /* Adjust left position */
+        z-index: 15;
+       
+    }
+
+/* styles.css */
+.footer {
+    background-color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.footer a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 5px;
 }
 
 
-.product-carousel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  width: 100%;
-  height: auto; /* Adjust height as needed */
-}
-
-/* Product Container */
-.product-container {
-  flex-shrink: 0;
-  width: 400px; /* Adjust width as needed */
-  margin: 0 auto; /* Center the container horizontally */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+/* Footer */
+.footer {
+  background-color: #f5f5f5;
+  padding: 10px;
   text-align: center;
+   margin-top: 20%; /* Push footer to bottom using flexbox */
+  
+}
+.footer img {
+  width: 30px; /* Adjust the width to your desired size */
+  height: auto;  /* Maintain aspect ratio */
+  margin: 0 10px;  /* Adjust spacing between icons as needed */
 }
 
-/* Product Description */
-.product-description {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.7);
-  transition: opacity 0.3s ease;
-  opacity: 0;
+.igpost {
+    position: absolute;
+    width: 300px; /* Initial width */
+    height: auto; /* Maintain aspect ratio */
+    transition: left 0.5s ease; /* Smooth transition for left position */
+    
 }
 
 
-.product-container:hover .product-description {
-  opacity: 1;
-}
-
-.product-description p {
-  color: white;
-  font-family: Montserrat, sans-serif; /* Add Montserrat font */
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 10px;
-}
-
-/* Product Image */
-.product-container img {
-  width: 400px;
-  height: 400px;
-  margin-bottom: 20px;
-}
-
-/* Carousel Buttons */
-.prev-button,
-.next-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.5);
-  border: none;
-  color: black;
-  font-size: 20px;
-  cursor: pointer;
-  z-index: 1;
-}
-
-.prev-button {
-  left: 10px;
-}
-
-.next-button {
-  right: 10px;
-}
-
-.featured-products-heading {
-  text-align: center; /* Center-align the text */
-  margin-top: 50px; /* Adjust the margin to move it below the header */
-}
-
-.quote-text {
-  text-align: center; /* Center-align the text */
-  margin-bottom: 20px; /* Add margin to separate it from the "Featured Products" heading */
-}
-
-body {
-  padding-top: 100px; /* Adjust the padding to move content below the header */
-}
-
-.quote-text {
-  text-align: center;
-  margin-bottom: 20px;
-  font-family: monospace;
-  font-size: 1.5rem;
-}
-
-.featured-products-heading {
-  text-align: center;
-  margin-top: 50px;
-  font-family: monospace;
-  font-size: 2rem;
-}
-
-.section-title {
-  text-align: center;
-  font-family: monospace;
-  font-size: 2rem;
-  margin-top: 20px;
-}
-
-.form-label {
-  font-family: monospace;
-  font-size: 1.5rem;
+#igpost1, #igpost2, #igpost3 {
+    position: absolute;
+    width: 200px; /* Initial width */
+    height: auto; /* Maintain aspect ratio */
+    transition: all 0.5s ease; /* Smooth transition */
+    top: 770px; /* Adjust the top position */
+    left: 970px; /* Adjust the left position */
+    z-index: 15;
 }
